@@ -1,0 +1,649 @@
+﻿@{
+    ViewData["Title"] = "RoomSchedule";
+}
+
+@section LeftNavigation{
+    <partial name="_AdminLeftNavigation" />
+}
+
+<!-- MAIN CONTENT-->
+    <div class="main-content" id="viewroom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="text-align:center">
+                    <div class="overview-wrap">
+                        <h2 class="title-1">
+                            Room Schedule
+                        </h2>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+            <br />
+            <button class="btn btn-primary col-lg-1 pull-right" style="margin-right:5%;" onclick="showadd();">+ ADD</button><br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive table-responsive-data2" style="overflow:auto">
+                        <table class="table table-data2" id="getRoom">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>Room Id</th>
+                                    <th>Room Name</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+<div class="main-content" id="viewroomschedule">
+    <h2 align="center">View Student Room Schedule</h2>
+    <hr /><br /><br />
+    <button class="btn btn-primary col-lg-1 pull-right" style="margin-right:5%;" onclick="showaddSchedule();">+ ADD</button><br />
+    @*<button class="btn btn-danger col-lg-1 pull-right" id="std" style="margin-right:5%;">- DELETE</button>*@
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive table-responsive-data2">
+                    <a href="~/Dashboard/RoomSchedule"><i class="fa fa-backward"></i></a>
+                    <table class="table table-data2" id="getRoomSchedule">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>Room Schedule Id</th>
+                                <th>Teacher Id</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Subject</th>
+                                <th>Room Id</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*////////////////*@
+<div class="main-content" id="viewstudentschedule">
+    <h2 align="center">View Student Details</h2>
+    <hr /><br /><br />
+    @*<button class="btn btn-primary col-lg-1 pull-right" style="margin-right:5%;" onclick="showaddSchedule();">+ ADD</button><br />*@
+    @*<button class="btn btn-danger col-lg-1 pull-right" style="margin-right:5%;">- DELETE</button>*@
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive table-responsive-data2" style="overflow:auto">
+                        <a href="~/Dashboard/RoomSchedule"><i class="fa fa-backward"></i></a>
+                        <table class="table table-data2" id="getstudentSchedule">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>Student Id</th>
+                                    <th>Student Image Id</th>
+                                    <th>Student Name</th>
+                                    <th>Student Batch</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- END MAIN CONTENT-->
+<!-- END PAGE CONTAINER-->
+<div id="overlay1" style="z-index:4;">
+    <div id="schedule" class="">
+        <div class="form-container">
+            <a class="pull-right" href="#viewroomschedule" onclick="hidechangeschedule();"><i class="fa fa-close"></i></a>
+            <h4 align="center" class="text-primary">Schedule Room</h4><hr />
+            <form action="Homepage.html" method="post">
+                <div class="form-group">
+                    <label>Choose Date</label>
+                    <input class="form-control" type="date" name="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Teacher Id</label>
+                    <input class="form-control" type="text" name="teacherid" id="teacherid" required>
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    @* <input class="form-control" type="text" name="email" id="fname" required>*@
+                    <select name="scheduleTime" class="form-control">
+                        <option value="9.00">9.00</option>
+                        <option value="9.55">9.55</option>
+                        <option value="11.05">11.05</option>
+                        <option value="01.00">01.00</option>
+                        <option value="02.00">02.00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input class="form-control" type="text" name="subject" id="subject" required>
+                </div>
+                <div class="form-group">
+                    <label>Room Id</label>
+                    <input class="form-control" type="text" name="roomid" id="roomid" required>
+                </div>
+                <div class="form-group">
+                    <label>Batch</label>
+                    @*  <input class="form-control" type="time" name="batch" id="batch" required>*@
+                    <select name="scheduleTime" class="form-control">
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="B3">B3</option>
+                        <option value="B4">B4</option>
+                        <option value="B5">B5</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-primary" id="roomupdate">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="add" class="">
+        <div class="form-container">
+            <a class="pull-right" href=" "><i class="fa fa-close"></i></a>
+            <h4 align="center" class="text-primary">Add Room</h4><hr />
+            <form action="" method="post">
+                <div class="form-group">
+                    <h5>Enter Room Name Here and Add Schedule for this Room</h5>
+                    <input class="form-control" type="text" name="fname" id="rname" required>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-primary" id="addRoom">ADD</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="addSchedule" class="">
+        <div class="form-container">
+            <a class="pull-right" href="#viewroomschedule" onclick="hidechangeschedule();"><i class="fa fa-close"></i></a>
+            <h4 align="center" class="text-primary">Add Room Schedule</h4><hr />
+            <form method="post">
+                <div class="form-group">
+                    <label>Choose Date</label>
+                    <input class="form-control" type="date" name="date" id="roomScheduleDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Teacher Id</label>
+                    <input class="form-control" type="text" name="teacherid" id="roomTeacherId" required>
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    <input class="form-control" type="time" name="roomScheduleTime" id="roomScheduleTime" required>
+
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input class="form-control" type="text" name="subject" id="roomScheduleSubject" required>
+                </div>
+                <div class="form-group">
+                    <label>Room Id</label>
+                    <input class="form-control" type="text" name="roomid" id="roomId" required>
+                </div>
+                <div class="form-group">
+                    <label>Batch</label>
+                    @*  <input class="form-control" type="time" name="batch" id="batch" required>*@
+                    <select  id="batch" class="form-control">
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="B3">B3</option>
+                        <option value="B4">B4</option>
+                        <option value="B5">B5</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-primary" id="addRoomSchedule">ADD</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            debugger;
+            $("#viewroomschedule").hide();
+            $("#viewstudentschedule").hide();
+
+            //GetRoom
+            $("#viewstudentschedule").hide();
+
+            $.ajax({
+                url: '/Room/GetRoom',
+                type: 'get',
+                dataType: 'json',
+                success: function (result) {
+                    debugger
+                    if (result) {
+                        var bat = ' <tbody>';
+                        for (var i = 0; i < result.length; i++) {
+
+                            bat += '<tr class="tr-shadow">< td > <label class="au-checkbox"><input type="checkbox"><span class="au-checkmark"></span></label></td><td>' + (i + 1) + '</td><td>' + result[i].roomId + '</td> <td>' + result[i].roomName + '</td><td><div class="table-data-feature"><button class="btn btn-danger" style="margin-left:-200px" onclick="showviewschedule(' + result[i].roomId + ')"><i class="fa fa-eye"></i>View Schedules</button></td><td><div class="table-data-feature"><button class="item"  data-toggle="tooltip" data-placement="top" title="Delete"><a onclick="deleteroom(' + result[i].roomId + ')"><i class="zmdi zmdi-delete"></i></a></button></td></div></tr > ';
+                        }
+                        bat += '</tbody>'
+
+                        $('#getRoom').append(bat);
+
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+
+                },
+
+            });
+
+
+            //$.ajax({
+            //    url: '/Room/GetRoomSchedule',
+            //    type: 'get',
+            //    dataType: 'json',
+            //    success: function (result) {
+            //        //debugger
+            //        if (result) {
+            //            var bat = ' <tbody>';
+            //            for (var i = 0; i < result.length; i++) {
+            //                bat += '<tr class="tr-shadow">< td > <label class="au-checkbox"><input type="checkbox"><span class="au-checkmark"></span></label></td><td>' + (i + 1) + '</td><td>' + result[i].roomScheduleId + '</td><td>' + result[i].teacherId + '</td> <td>' + result[i].roomScheduleDate + '</td> <td>' + result[i].roomScheduleTime + '</td><td>' + result[i].roomScheduleSubject + '</td><td><button  class="btn btn-danger" style="margin-left:0px" onclick="showstudentschedule(' + result[i].roomId + ',' + result[i].roomScheduleId + ');"><i class="fa fa - eye"></i>View Students</button></td></tr > ';
+            //            }
+            //            bat += '</tbody>'
+
+            //            $('#getRoomSchedule').append(bat);
+
+            //        }
+            //        else {
+            //            alert("failed to get data");
+            //        }
+
+            //    },
+
+            //});
+
+            $("#addRoom").click(function () {
+                var rname = $("#rname").val();
+                //alert(rname);
+                $.ajax({
+                    url: '/Room/AddRoom',
+                    type: 'post',
+                    dataType: 'json',
+                    data:
+                    {
+                        RoomName: rname,
+                    },
+
+                    success: function (result) {
+                        //alert(result);
+                        //alert("Successfully inserted Room");
+
+                    },
+
+                }); alert("Successfully inserted Room");
+
+            });
+
+            $("#addRoomSchedule").click(function () {
+                var rdate = $("#roomScheduleDate").val();
+                var rteacherid = $("#roomTeacherId").val();
+                var rtime = $("#roomScheduleTime").val();
+                var rsub = $("#roomScheduleSubject").val();
+                var rid = $("#roomId").val();
+                var rbatch = $("#batch").val();
+                //alert(rdate);
+                //alert(rtime);
+                //alert(rsub);
+                //alert(rid);
+                //alert(rteacherid);
+                //alert(rtime);
+
+
+                $.ajax({
+                    url: '/RoomSchedule/AddStudentScheduleByBatch',
+                    type: 'get',
+                    dataType: 'json',
+                    data:
+                    {
+                        TeacherId: rteacherid,
+                        RoomScheduleDate: rdate,
+                        RoomScheduleTime: rtime,
+                        RoomScheduleSubject: rsub,
+                        RoomId: rid,
+                        batch: rbatch,
+                    },
+
+                    success: function (result) {
+                        alert(result);
+                        alert("Successfully inserted Room Schedule");
+
+                    },
+
+                });
+
+            });
+
+
+
+        });
+
+
+        //function showtest() {
+        //    $('#test-form').animate({ top: '15%' }, 500);
+        //    $('#test-form-div').animate({ top: '20%' }, 500);
+        //    $('.account-dropdown').hide();
+        //    document.getElementById("overlay").style.display = "block";
+        //}
+        //function hidetest() {
+        //    $('#test-form').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay").style.display = "none";
+        //}
+
+        //function showsetting() {
+        //    $('#setting').animate({ top: '15%' }, 500);
+        //    $('.account-dropdown').hide();
+        //    document.getElementById("overlay").style.display = "block";
+        //}
+        //function hidesetting() {
+        //    $('#setting').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay").style.display = "none";
+        //}
+
+        //function showmoresetting() {
+        //    $('#moresetting').animate({ top: '15%' }, 500);
+        //    $('.account-dropdown').hide();
+        //    document.getElementById("overlay").style.display = "block";
+        //}
+        //function hidemoresetting() {
+        //    $('#moresetting').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay").style.display = "none";
+        //}
+
+
+        function showschedule() {
+            $('#schedule').animate({ top: '12%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+        }
+        function hideschedule() {
+            $('#schedule').animate({ top: '-500%' }, 500);
+            document.getElementById("overlay1").style.display = "none";
+        }
+
+        function search(string) {
+            window.find(string);
+        }
+
+        function showviewschedule(roomid) {
+            $("#viewroom").hide();
+            $("#viewstudentschedule").hide();
+
+
+            //alert(roomid);
+            $.ajax({
+                url: '/RoomSchedule/GetRoomSchedule',
+                type: 'get',
+                dataType: 'json',
+                data:
+                {
+                    RoomId: roomid
+                },
+                success: function (result) {
+
+                    $("#viewroomschedule").show();
+                    if (result) {
+                        var bat = ' <tbody>';
+                        for (var i = 0; i < result.length; i++) {
+
+
+                            //showstudentschedule(' + result[i].roomId + ')
+
+                            bat += '<tr class="tr-shadow">< td > <label class="au-checkbox"><input type="checkbox"><span class="au-checkmark"></span></label></td><td>' + (i + 1) + '</td><td>' + result[i].roomScheduleId + '</td><td>' + result[i].teacherId + '</td> <td>' + result[i].roomScheduleDate + '</td> <td>' + result[i].roomScheduleTime + '</td><td>' + result[i].roomScheduleSubject + '</td><td><button  class="btn btn-danger" style="margin-left:0px" onclick="showstudentschedule(' + result[i].roomId + ',' + result[i].roomScheduleId + ');"><i class="fa fa - eye"></i>View Students</button></td></tr > ';
+
+                        }
+                        bat += '</tbody>'
+
+                        $('#getRoomSchedule').append(bat);
+
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+
+                },
+
+            });
+        }
+
+        function showadd() {
+            $('#add').animate({ top: '12%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+        }
+
+        function showaddSchedule() {
+            $('#addSchedule').animate({ top: '4%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+
+        }
+        function hidechangeschedule() {
+            $('#addSchedule').animate({ top: '-500%' }, 500);
+            document.getElementById("overlay1").style.display = "none";
+        }
+
+        function hideadd() {
+            $('#add').animate({ top: '-500%' }, 500);
+        }
+
+        function on() {
+            document.getElementById("overlay1").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay1").style.display = "none";
+        }
+
+        function showstudentschedule(roomid, roomsheduleid) {
+            $("#viewroom").hide();
+            $("#viewroomschedule").hide();
+
+
+            //alert(roomsheduleid);
+
+            $.ajax({
+                url: '/RoomSchedule/GetRoomStudents',
+                type: 'get',
+                dataType: 'json',
+                data:
+                {
+                    RoomId: roomid,
+                    RoomSheduleId: roomsheduleid,
+                },
+                success: function (result) {
+
+                    $("#viewstudentschedule").show();
+                    if (result) {
+                        var bat = ' <tbody>';
+                        for (var i = 0; i < result.length; i++) {
+                            bat += '<tr class="tr-shadow">< td > <label class="au-checkbox"><input type="checkbox"><span class="au-checkmark"></span></label></td><td>' + (i + 1) + '</td><td>' + result[i].studentId + '</td><td class="desc"><img src="' + result[i].studentImg + '" style="width: 80px; height:90px;"/></td> <td>' + result[i].studentName + '</td> <td>' + result[i].batch + '</td><td> ';
+                        }
+                        bat += '</tbody>'
+
+                        $('#getstudentSchedule').append(bat);
+
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+
+                },
+
+            });
+        }
+
+
+        function deleteroom(a) {
+            //alert(a);
+            var delid = a;
+            $.ajax({
+
+                url: '/Room/RoomDeleteId',
+                type: 'post',
+                dataType: 'json',
+                data:
+                {
+                    id: delid,
+                },
+                success: function (result) {
+
+                    alert("Successfully Deleted Class Room Information");
+                    location.reload();
+                },
+            });
+        }
+
+
+
+        function deleteroomschedule(a) {
+            //alert(a);
+            var delid = a;
+            $.ajax({
+
+                url: '/RoomSchedule/RoomScheduleDeleteId',
+                type: 'post',
+                dataType: 'json',
+                data:
+                {
+                    id: delid,
+                },
+                success: function (result) {
+                    alert("Successfully Deleted RoomSchedule");
+                    location.reload();
+                },
+            });
+        }
+    </script>
+}
+
+
+@section Styles{
+    <style>
+        #overlay1 {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+        }
+
+        #schedule {
+            position: fixed;
+            top: -500%;
+            width: 35%;
+            margin-left: 30%;
+            background-color: white;
+            box-shadow: 2px 3px 8px slategrey;
+            border-radius: 5px;
+            padding: 35px;
+            overflow: auto;
+        }
+
+        #add {
+            position: fixed;
+            top: -500%;
+            width: 38%;
+            margin-left: 30%;
+            background-color: white;
+            box-shadow: 2px 3px 8px slategrey;
+            border-radius: 5px;
+            padding: 35px;
+            overflow: auto;
+        }
+
+        #addSchedule {
+            position: fixed;
+            top: -500%;
+            width: 35%;
+            margin-left: 30%;
+            background-color: white;
+            box-shadow: 2px 3px 8px slategrey;
+            border-radius: 5px;
+            padding: 35px;
+            overflow: auto;
+        }
+
+        #test-form-div {
+            position: fixed;
+            top: -500%;
+            max-width: 1500px;
+            max-height: 1500px;
+            min-width: 1500px;
+            min-height: 1500px;
+            background-color: black;
+        }
+
+        form.example input[type=text] {
+            padding: 8px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 70%;
+            height: 60%;
+            background: white;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            height: 70%;
+            padding: 5px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+}
+
+
+
+
+
+
+

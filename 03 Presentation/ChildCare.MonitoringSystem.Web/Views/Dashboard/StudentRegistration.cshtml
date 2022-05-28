@@ -1,0 +1,440 @@
+﻿@model StudentDetail
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_AppLayout";
+}
+
+
+@section LeftNavigation{
+    <partial name="_AdminLeftNavigation" />
+}
+<!-- MAIN CONTENT-->
+<div class="main-content">
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <strong align="center">Student Registration Form</strong>
+            </div>
+            <div class="card-body card-block">
+
+                <form asp-controller="Dashboard" asp-action="StudentRegistration" id="studentForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nf-student" class=" form-control-label">Student Name *</label>
+                        <input asp-for="StudentName" type="text" placeholder="Enter Student Name" title="Enter Student Name" class="form-control" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="nf-student-img" class=" form-control-label">Student Profile</label>
+                        <input asp-for="StudentImg" type="file" class="form-control" title="Choose Student Profile Picture" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class=" form-control-label">Address *</label>
+                        <textarea asp-for="StudentAddress" rows="5" class="form-control" title="Enter Student Address" required></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Gender  </label>
+                        <br />
+                        <input asp-for="StudentGender" type="radio" class="mygender" value="male" />Male&nbsp;
+                        <input asp-for="StudentGender" type="radio" class="mygender" value="female" />Female&nbsp;
+                        <input asp-for="StudentGender" type="radio" class="mygender" value="others" />Others&nbsp;
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob" class=" form-control-label">Date-Of-Birth *</label>
+                        <input asp-for="StudentDob" type="date" class="form-control" required />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="fname" class=" form-control-label">Father Name/Guardian Name *</label>
+                        <input asp-for="FatherName" type="text" class="form-control" required />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="mname" class=" form-control-label">Mother Name </label>
+                        <input asp-for="MotherName" type="text" class="form-control" required />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="mname" class=" form-control-label">User Name *</label>
+                        <div class="input-group">
+                         
+                            <input asp-for="UserName" type="text" placeholder="Username" required class="form-control">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nf-email" class=" form-control-label">Email *</label>
+                        <div class="input-group">
+                            <input asp-for="UserEmail" type="email" placeholder="Enter Email.." required class="form-control">
+                            <div class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="nf-password" class=" form-control-label">Password *</label>
+                        <div class="input-group">
+                            <input asp-for="UserPassword" type="password" required placeholder="Enter Password.." class="form-control">
+                            <div class="input-group-addon">
+                                <i class="fa fa-asterisk"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobileno" class=" form-control-label">Mobile Number</label>
+                        <input asp-for="UserMobileNo" type="tel" class="form-control" required />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Batch</label>
+                     
+                        <select asp-for="Batch" id="sbatch" class="form-control">
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="B3">B3</option>
+                            <option value="B4">B4</option>
+                            <option value="B5">B5</option>
+                        </select>
+                    </div>
+                    <input type="checkbox" onchange="showbus()" /><label>Add Bus Detail</label>
+
+                    <div hidden class="form-group">
+                        <label class=" form-control-label">Schedule Id</label>
+                        <input asp-for="Sheduleid" readonly id="sheduleid" type="text" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Destination</label>
+                        <input asp-for="Toaddress" readonly id="toaddress" type="text" class="form-control" required />
+                    </div>
+
+
+                    <input type="submit" class="btn btn-primary " />
+                    <button type="reset" class="btn btn-success ">
+                        Reset
+                    </button>
+                    <span asp-validation-for="ErrorMessage" class="text-danger"></span>
+                </form>
+
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END MAIN CONTENT-->
+
+
+<div id="overlay1" style="z-index:4">
+    <div id="busdiv">
+        <a class="pull-right" onclick="hidepopup();"><i class="fa fa-close text-primary"></i></a>
+        <h2 align="center" class="text-primary">Bus Registration</h2><hr />
+
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Destination</label>
+            <div class="col-sm-8">
+                <select id="to" onchange="showbus()" class="form-control"></select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-8">
+                <button type="button" class="btn btn-outline-primary btn-block" onclick="onChangeHandler()">Check Bus Availibilty</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <table id="busregister">
+                <tr>
+                    @*<td>Scheduling Id</td>
+                    <td>           </td>
+                    <td>Time</td>*@
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-primary btn-block"  onclick="addbusbtn()">Add Bus info</button>
+        </div>
+    </div>
+
+</div>
+<!--close Account popup-->
+<!--start setting popup-->
+@*<div id="setting" class="">
+            <div class="form-container">
+                <a class="pull-right" href=" "><i class="fa fa-close"></i></a>
+                <h4 align="center" class="text-primary">Password Setting</h4><hr />
+                <form action="Homepage.html" method="post">
+                    <div class="form-group">
+                        <label>Old Password</label>
+                        <input class="form-control" type="text" name="fname" required>
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input class="form-control" type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Confirm Password</label>
+                        <input class="form-control" type="tel" name="number" required>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">SUBMIT </button><br>
+                    <a href="#moresetting" class="pull-right" onclick="showmoresetting()">Set More Details</a>
+                </form>
+            </div>
+        </div>
+        <!--close setting popup-->
+        <!--start more setting popup-->
+        <div id="moresetting" class="">
+            <div class="form-container">
+                <a class="pull-right" href=" "><i class="fa fa-close"></i></a>
+                <h4 align="center" class="text-primary">User Detail Setting</h4><hr />
+                <form action="Homepage.html" method="post">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>User Email</label>
+                        <input class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile No</label>
+                        <input class="form-control" type="number" required>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">EDIT</button>
+                </form>
+            </div>
+        </div>
+        <!--close more setting popup-->
+    @*</div>*@
+
+@section Scripts{
+
+    @if (Model != null)
+    {
+        <script type="text/javascript">
+            $(function () {
+                alert("Inserted Customer ID: " + @Model.ErrorMessage);
+            });
+        </script>
+    }
+    <script>
+
+        $.ajax({
+
+            url: '/Bus/getBusDestination',
+            type: 'post',
+            dataType: 'json',
+            data:
+            {
+            },
+            success: function (result) {
+
+                if (result) {
+                    var busVal = '';
+
+                    for (i = 0; i < result.length; i++) {
+                        busVal += '<option value="' + result[i] + '">' + result[i] + '</option>';
+                    }
+                    $('#to').append(busVal);
+                }
+            },
+        });
+
+
+        function hidepopup() {
+            //$('#busdiv').hide();
+            $('#overlay1').hide();
+        }
+        function addbusinfo(t) {
+
+            //var t = document.getElementByClassName('tick').value;
+            //alert(t);
+            document.getElementById('sheduleid').value = t;
+            document.getElementById('toaddress').value = document.getElementById('to').value;
+            document.getElementById('fromaddress').value = document.getElementById('from').value;
+            //$('#overlay1').hide();
+
+
+        }
+        function addbusbtn() {
+            $('#overlay1').hide();
+        }
+        //document.getElementById('from').addEventListener('change', onChangeHandler);
+
+        function onChangeHandler() {
+            $('#busregister').html('');
+            var to = document.getElementById('to').value;
+            //var from = document.getElementById('from').value;
+
+            $.ajax({
+
+                url: '/Bus/getbusshedule',
+                type: 'post',
+                dataType: 'json',
+                data:
+                {
+                    To: to,
+                    //From: from,
+                },
+                success: function (result) {
+
+                    if (result) {
+                        var tabl = '';
+                        for (i = 0; i < result.length; i++) {
+                            tabl += '<tr><td>' + (i + 1) + '</td></tr><tr><td>Select : <input type = "radio" name="busbt"class="bus" onclick="addbusinfo(' +result[i].busScheduleId+')" id="tick" value = "' + result[i].busScheduleId + '" /> </td></tr><tr><td>Schedule Id: ' + result[i].busScheduleId + '</td></tr><tr><td>Schedule Time :' + result[i].busScheduleTime + '</td><td>       </td>&nsb;&nsb;&nsb;&nsb;&nsb;&nsb;&nsb;&nsb;<br></tr>';
+                        }
+                        $('#busregister').append(tabl);
+                    }
+                },
+            });
+
+        }
+
+        function search(string) {
+            window.find(string);
+        }
+
+        //function showtest() {
+        //    $('#test-form').animate({ top: '15%' }, 500);
+        //    $('#test-form-div').animate({ top: '20%' }, 500);
+        //    $('.account-dropdown').hide();
+        //    document.getElementById("overlay").style.display = "block";
+        //}
+
+        //function hidetest() {
+        //    $('#test-form').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay").style.display = "none";
+        //}
+
+        function showbus() {
+            $('#busdiv').animate({ top: '10%' }, 500);
+            //$('#busdiv').animate({ top: '20%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+        }
+
+        function hidebus() {
+            $('#busdiv').animate({ top: '-500%' }, 500);
+            document.getElementById("overlay1").style.display = "none";
+        }
+        //function showsetting() {
+        //    $('#setting').animate({ top: '15%' }, 500);
+        //    $('.account-dropdown').hide();
+        //    document.getElementById("overlay").style.display = "block";
+        //}
+        //function hidesetting() {
+        //    $('#setting').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay").style.display = "none";
+        //}
+        //function showmoresetting() {
+        //    $('#moresetting').animate({ top: '15%' }, 500);
+        //    $('.account-dropdown').hide();
+        //    document.getElementById("overlay").style.display = "block";
+        //}
+        //function hidemoresetting() {
+        //    $('#moresetting').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay").style.display = "none";
+        //}
+
+        function reset() {
+            document.getElementById('studentForm').reset();
+        }
+    </script>
+}
+
+@section Styles{
+    <style>
+        #busdiv {
+            position: fixed;
+            top: -500%;
+            width: 35%;
+            margin-left: 30%;
+            background-color: white;
+            box-shadow: 2px 3px 8px slategrey;
+            border-radius: 5px;
+            padding: 35px;
+        }
+
+        #test-form-div {
+            position: fixed;
+            top: -500%;
+            max-width: 1500px;
+            max-height: 1500px;
+            min-width: 1500px;
+            min-height: 1500px;
+            background-color: black;
+        }
+
+        form.example input[type=text] {
+            padding: 8px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 70%;
+            height: 60%;
+            background: white;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            height: 70%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: " ";
+            clear: both;
+            display: table;
+        }
+
+        #overlay1 {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+            overflow: scroll;
+        }
+    </style>
+}
+
+
+
+
+
+
+
+

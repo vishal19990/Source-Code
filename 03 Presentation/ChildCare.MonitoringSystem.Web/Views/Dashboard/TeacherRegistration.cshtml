@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "form1";
+    Layout = "_AppLayout";
+}
+
+@section LeftNavigation{
+    <partial name="_AdminLeftNavigation" />
+}
+
+<!-- MAIN CONTENT-->
+<div class="main-content">
+    @*<div class="section__content section__content--p30">*@
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="title-3 m-b-5">
+                    Teacher Registration Form
+                </h3> 
+            </div>
+            <div class="card-body card-block" style="padding:60px;">
+                <form action="" method="post" id="TeacherForm" style="width:100%;">
+                    <div class="form-group">
+                        <label for="mname" class=" form-control-label">User Name *</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input type="text" required id="uname1" name="uname" class="form-control" >
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nf-email" class=" form-control-label">Email *</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <input type="email" id="uemail" name="nf-email" class="form-control" required>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nf-password" class=" form-control-label">Password *</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-asterisk"></i>
+                            </div>
+                            <input type="password" id="upassword" name="nf-password" class="form-control" required>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobileno" class=" form-control-label">Mobile Number *</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <input type="tel" maxlength="10" id="umobileno" name="mobileno" class="form-control" required />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button type="submit" id="teacherlogin" class="btn btn-primary ">
+                    Submit
+                </button>
+                <button type="reset" class="btn btn-success" onclick="formreset()">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END MAIN CONTENT-->
+<!--start Account popup-->
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#teacherlogin").click(function () {
+                var uname = $("#uname1").val();
+                var uemail = $("#uemail").val();
+                var upassword = $("#upassword").val();
+                var umobileno = $("#umobileno").val();
+                //alert(uname);
+                //alert(uemail);
+                //alert(upassword);
+                //alert(umobileno);
+                debugger
+                if (uname != "" && uemail != "" && upassword != "" && umobileno != "") {
+                    $.ajax({
+                        url: '/User/AddTeacher',
+                        type: 'post',
+                        dataType: 'json',
+                        data:
+                        {
+                            UserName: uname,
+                            UserEmail: uemail,
+                            UserPassword: upassword,
+                            UserMobileNo: umobileno,
+                        },
+                        success: function (result) {
+                            alert("Successfully inserted Teacher");
+                        },
+                    });
+                }
+                else {
+                    alert("Please enter required field");
+                }
+            });
+
+        });
+
+        function reset() {
+            document.getElementById('TeacherForm').reset();
+        }
+
+        function search(string) {
+            window.find(string);
+        }
+
+        function formreset() {
+            window.location.reload();
+        }
+    </script>
+}
+
+@section Styles{
+    <style>
+        form.example input[type=text] {
+            padding: 8px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 70%;
+            height: 60%;
+            background: white;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            height: 70%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            clear: both;
+            display: table;
+        }
+    </style>
+}
+
+
+
+
+
+
+

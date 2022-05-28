@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "_SiteLayout";
+}
+
+<img src="~/images/contactus-banner.jpg" style="width:100%; height:65%" />
+
+<section id="contact">
+    <div class="section-content">
+        <h3 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h3>
+    </div>
+    <div class="contact-section">
+        <div class="container">
+            <form method="post" style="width:100%; display:flex;">
+                    <div class="col-md-6 form-line">
+                        <div class="form-group">
+                            <label>Your name</label>
+                            <input type="text" class="form-control" id="contactname" placeholder=" Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" id="contactemail" placeholder=" Enter Email id">
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile No.</label>
+                            <input type="tel" class="form-control" id="contactmob" placeholder=" Enter 10-digit mobile no.">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> Message</label>
+                            <textarea class="form-control" id="contactmsg" placeholder="Enter Your Message"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary submit" onclick="contact();"><i class="fa fa-paper-plane" aria-hidden="true"></i>send</button>
+
+                            @*<button type="button" class="btn btn-primary" id="sendbtn"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>*@
+                        </div>
+
+                    </div>
+
+                </form>
+        </div>
+        </div>
+</section>
+
+<script>
+    function contact() {
+        var contactname = $("#contactname").val();
+        var contactemail = $("#contactemail").val();
+        var contactmob = $("#contactmob").val();
+        var contactmsg = $("#contactmsg").val();
+      
+        alert(contactname);
+        //alert(contactemail);
+        //alert(contactmob);
+        //alert(contactmsg);
+        debugger
+        $.ajax({
+            url: '/Contact/AddContact',
+            type: 'post',
+            dataType: 'json',
+            data:
+            {
+                ContactName: contactname,
+                ContactEmail: contactemail,
+                ContactMobileNo: contactmob,
+                ContactMsg: contactmsg,
+            },
+            success: function (result) {
+                alert("Message Sent Successfully");
+                //location.reload();
+            },
+        });
+        alert("Send successfully1");
+    }
+
+
+
+
+</script>
+
+<style>
+    .content-header {
+        font-family: 'Oleo Script', cursive;
+        color: #fcc500;
+        font-size: 45px;
+    }
+
+    .section-content {
+        text-align: center;
+    }
+
+    #contact {
+        font-family: 'Teko', sans-serif;
+        padding-top: 60px;
+        width: 100%;
+        width: 100vw;
+        height: 550px;
+        background: #3a6186; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #3a6186, #89253e); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #3a6186, #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #fff;
+    }
+
+    .contact-section {
+        padding-top: 40px;
+    }
+
+    .contact-section .col-md-6 {
+        width: 50%;
+    }
+
+    .form-line {
+        border-right: 1px dashed #B29999;
+    }
+
+    .form-group {
+        margin-top: 10px;
+    }
+
+    label {
+        font-size: 1.3em;
+        line-height: 1em;
+        font-weight: normal;
+    }
+
+    .form-control {
+        font-size: 1.3em;
+        color: #080808;
+    }
+
+    textarea.form-control {
+        height: 135px;
+    }
+
+    .submit {
+        font-size: 1.1em;
+        float: right;
+        width: 150px;
+        background-color: transparent;
+        color: #fff;
+    }
+</style>
+
+
+

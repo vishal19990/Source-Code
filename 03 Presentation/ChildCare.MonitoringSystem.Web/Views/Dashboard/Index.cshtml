@@ -1,0 +1,867 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_AppLayout";
+}
+
+@section LeftNavigation{
+    <partial name="_AdminLeftNavigation" />
+}
+
+<div class="main-content">
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="text-align:center">
+                <div class="overview-wrap">
+                    <h2 class="title-1">
+                        Welcome to Dashboard
+                    </h2>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="row m-t-25">
+            <div class="col-sm-6 col-lg-3">
+                <div class="overview-item overview-item--c1">
+                    <div class="overview__inner">
+                        <a href="~/Dashboard">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="zmdi zmdi-account-o"></i>
+                                </div><br />
+                                <div class="text">
+                                    <h2>1000+</h2>
+                                    <span>Total No. of Students</span>
+                                </div>
+
+                            </div>
+                        </a>
+                        @*<div class="overview-chart">
+            <canvas id="widgetChart1"></canvas>
+        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="overview-item overview-item--c2">
+                    <div class="overview__inner">
+                        <a href="~/Dashboard/CamaraView">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="zmdi zmdi-videocam"></i>
+                                </div>
+                                <br />
+
+                                <div class="text">
+                                    <h2>30+</h2>
+                                    <span>Total Cameras</span>
+                                </div>
+                            </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="overview-item overview-item--c3">
+                    <div class="overview__inner">
+                        <a href="~/Dashboard/RoomSchedule">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="zmdi zmdi-laptop"></i>
+                                </div><br />
+                                <div class="text">
+                                    <h2>50+</h2>
+                                    <span>Total ClassRooms</span>
+                                </div>
+                            </div>
+                            </a>
+                            @*<div class="overview-chart">
+                <canvas id="widgetChart3"></canvas>
+            </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="overview-item overview-item--c4">
+                    <div class="overview__inner">
+                        <a href="~/Dashboard/BusSchedule">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="zmdi zmdi-bus"></i>
+                                </div><br />
+                                <div class="text">
+                                    <h2>40+</h2>
+                                    <span>Total No.of Buses</span>
+                                </div>
+                            </div>
+                            </a>
+                            @*<div class="overview-chart">
+                <canvas id="widgetChart4"></canvas>
+            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="~/images/img/classroom3.jpg" />
+            </div>
+            <div class="col-lg-3">
+                <img src="~/images/img/classroom1.jpg" />
+            </div>
+            <div class="col-lg-3">
+                <img src="~/images/img/classroom4.jpg" />
+            </div>
+            <div class="col-lg-3">
+                <img src="~/images/img/bus.jpg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="overview-wrap">
+                    <h2 class="title-1">Gallery</h2>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="~/images/img/playground2.jpg" />
+            </div>
+            <div class="col-lg-3">
+                <img src="~/images/img/playground.jpg" />
+            </div>
+            <div class="col-lg-3">
+                <img src="~/images/img/campus1.jpg" />
+            </div>
+            <div class="col-lg-3">
+                <img src="~/images/img/playground1.jpg" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="title-1 m-b-25">Teacher info   </h2>
+                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
+                    @*<h4 style="color:yellow;">Teacher Names :   </h4>*@
+                    <div class="au-card-inner">
+                        <div class="table-responsive">
+                            <table class="table table-top-countries" id="listofteacher" style="color:white">
+                                    <th>#</th>
+                                    <th>Teacher Name</th>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6"><br />
+               <h2 class="title-1 m-b-25">Contact Us  </h2>
+               <img src="~/images/bg-title-02.jpg" /><hr >
+            
+               <button class="contact text-primary" onclick="showcontactpopup();"><i class="fa fa-backward"></i>&nbsp;&nbsp;&nbsp;View Contact Messages</button><br />
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-lg-6" style="z-index:2">
+                    <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                        <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
+                            <div class="bg-overlay bg-overlay--blue"></div>
+                            <h3>
+                                <i class="zmdi zmdi-account-calendar"></i>Viewed Message
+                            </h3>
+                            @*<button class="au-btn-plus">
+                                <i class="zmdi zmdi-plus"></i>
+                            </button>*@
+                        </div>
+                        @*//=============*@
+
+                        <div class="au-task js-list-load">
+                            <div class="au-task-list js-scrollbar3">
+                                <div class="au-task__item au-task__item--danger">
+                                    <table class="au-task__item-inner" id="viewedmsg"></table>
+
+                                </div>
+                            </div>
+                            <div class="au-task__footer">
+                                <button class="au-btn au-btn-load js-load-btn">load more</button>
+                            </div>
+                        </div>
+
+                        @*//=============*@
+                    </div>
+                </div>
+                <div class="col-lg-6" style="z-index:2" id="bottom">
+                    <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                        <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                            <div class="bg-overlay bg-overlay--blue"></div>
+                            <h3>
+                                <i class="zmdi zmdi-comment-text"></i>New Messages
+                            </h3>
+                            <button class="au-btn-plus">
+                                <i class="zmdi zmdi-plus" onclick="showpopup();"></i>
+                            </button>
+                        </div>
+                        <div class="au-task js-list-load">
+                            <div class="au-task-list js-scrollbar3">
+                                <div class="au-task__item au-task__item--danger">
+                                    <table class="au-task__item-inner" id="newmsg"></table>
+                                    @*<hr />*@
+                                </div>
+                            </div>
+                            <div class="au-task__footer">
+                                <button class="au-btn au-btn-load js-load-btn">load more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="overlay1" style="z-index:4">
+    <div id="senddiv">
+        <a class="pull-right" onclick="hidepopup();"><i class="fa fa-close"></i></a>
+        <h2 align="center" class="text-primary">Send Message</h2><hr />
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Admin Id</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="from" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">From</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" value="57" id="adminfrom" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">To</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="to" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">Message</label>
+            <div class="col-sm-8">
+                <textarea type="text" class="form-control" id="msg"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-primary btn-block" id="sendbtn">Send</button>
+            <button type="reset" class="btn btn-outline-success btn-block" onclick="Clearfield();">Clear</button>
+        </div>
+    </div>
+
+    @*===================*@
+
+    <div id="contactdiv" style="overflow:auto">
+        <a class="pull-right" onclick="hidecontactpopup();"><i class="fa fa-close text-primary"></i></a>
+        <h3 align="center" class="text-primary">View Contact Message</h3>
+        <hr />
+        <table id="viewcontactus"></table>
+    </div>
+
+    @*-------------------------------------------*@
+    <div id="sendcontactusdiv">
+        <a class="pull-right" onclick="hidepopup();"><i class="fa fa-close text-primary"></i></a>
+        <h3 align="center" class="text-primary">Contact Us- Send Message</h3><hr />
+        @*<div class="form-group row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Admin Id</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="from" />
+            </div>
+        </div>*@
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">From</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" readonly id="contactadminfrom" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">To</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="contactto" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">Message</label>
+            <div class="col-sm-8">
+                <textarea type="text" rows="6" class="form-control" id="contactmsg">Hi sir/Mam....Please contact the below Number:&ndash;&ndash;&ndash;9972074304</textarea>
+            </div>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-primary btn-block" style="border: 1px solid lightblue;" id="sendcontact">Send</button>
+            @*<button type="reset" class="btn btn-outline-success btn-block" style="border: 1px solid lightgreen;" onclick="Clearfield();">Clear</button>*@
+        </div>
+    </div>
+
+
+</div>
+
+
+<div id="overlay2" style="z-index:4">
+    <div id="viewmsgdiv">
+        <a class="pull-right" onclick="hideviewmsgdiv();"><i class="fa fa-close text-primary"></i></a>
+        <h2 align="center" class="text-primary">New Message</h2><hr />
+
+        <div class="form-group row">
+            <label  class="col-sm-4 col-form-label">From</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="msgfrom" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  class="col-sm-4 col-form-label">To</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="msgto" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  class="col-sm-4 col-form-label">Time</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="msgtime" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  class="col-sm-4 col-form-label">Message</label>
+            <div class="col-sm-8">
+                <textarea type="text" class="form-control" id="msgcontent"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="overlay1" style="z-index:4">
+    <div id="senddiv">
+        <a class="pull-right" onclick="hidepopup();"><i class="fa fa-close"></i></a>
+        <h2 align="center">Send Message</h2><hr />
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">From</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="from" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">To</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="to" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">Message</label>
+            <div class="col-sm-8">
+                <textarea type="text" class="form-control" id="msg"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-primary btn-block" id="sendbtn">Send</button>
+            <button type="button" class="btn btn-outline-success btn-block" onclick="Clearfield();">Clear</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+@section Styles{
+    <style>
+
+        #overlay1,#overlay2 {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+            overflow: auto;
+        }
+
+
+        #senddiv {
+            position: fixed;
+            top: -500%;
+            width: 32%;
+            margin-left: 32%;
+            background-color: white;
+            box-shadow: 2px 3px 10px grey;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+
+        #contactdiv {
+            position: fixed;
+            top: -500%;
+            width: 37%;
+            height:90%;
+            margin-left: 32%;
+            background-color: white;
+            box-shadow: 2px 3px 10px grey;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        #sendcontactusdiv {
+            position: fixed;
+            top: -500%;
+            width: 32%;
+            margin-left: 32%;
+            background-color: white;
+            box-shadow: 2px 3px 10px grey;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        #viewmsgdiv {
+            position: fixed;
+            top: -500%;
+            width: 32%;
+            margin-left: 32%;
+            background-color: white;
+            box-shadow: 2px 3px 10px grey;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        form.example input[type=text] {
+            padding: 8px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 72%;
+            height: 60%;
+            background: white;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            height: 70%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        #login {
+            position: fixed;
+            top: -500%;
+            width: 22%;
+            margin-left: 37%;
+            background-color: white;
+            box-shadow: 2px 3px 10px grey;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        #viewbtn {
+            /*color:white;*/
+            border:none;
+        }
+
+        .contact {
+            border:1px solid blue;
+            font-size: 1.1em;
+            float: right;
+            width: 250px;
+            background-color: transparent;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .contact:hover {
+            background-color: #fff;
+        }
+
+        .viewcontactbtn {
+            width: 80px;
+            height: 30px;
+            background-color: lightblue;
+            margin-left: 420px;
+            border: 1px solid blue;
+            border-radius: 4px;
+        }
+    </style>
+}
+
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: '/Student/GetStudentDetail',
+                type: 'get',
+                dataType: 'json',
+                success: function (result)
+                {
+
+                    if (result) {
+                        var bat = ' <tbody>';
+                        for (var i = 0; i < result.length; i++) {
+
+                            bat += '<tr><td>' + result[i].studentId + '</td><td>' + result[i].studentName + '</td><td>' + result[i].studentAddress + '</td><td class="text-right">' + result[i].fatherName + '</td><td class="text-right">' + result[i].motherName + '</td></tr>';
+
+                        }
+                        bat += '</tbody>';
+
+                        $('#studentInfo').append(bat);
+
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+
+                },
+            });
+
+
+            $.ajax({
+                url: '/User/GetTeacherDetail',
+                type: 'get',
+                dataType: 'json',
+                success: function (result) {
+                  
+                    if (result) {
+                        var put = '<tbody>';
+                        for (var i = 0; i < result.length; i++) {
+                            put += '<tr><td>' + (i + 1) + '</td><td>' + result[i].userName + '</td></tr>';
+                        }
+                        put += '</tbody>';
+                        $('#listofteacher').append(put);
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+                },
+
+            });
+
+            $.ajax({
+                url: '/MessageBoard/ViewedMsgDetail',
+                type: 'get',
+                dataType: 'json',
+                success: function (result) {
+                    
+                    if (result) {
+                        var put = '<tbody>';
+                        for (var i = 0; i < result.length; i = i + 4) {
+                            put += '<tr><td>From :' + result[i + 1] + '</td></tr><tr><td>To :' + result[i] + '</td></tr><tr><td>Msg :' + result[i + 2] + '</td></tr><tr><td>Date and Time :' + result[i + 3] + '</td></tr><tr><td>__________________________________________________________________</td></tr>';
+                        }
+                        put += '</tbody>';
+                        $('#viewedmsg').append(put);
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+                },
+
+            });
+
+            $.ajax({
+                url: '/MessageBoard/NewMsgDetail',
+                type: 'get',
+                dataType: 'json',
+                success: function (result) {
+                  
+                    if (result) {
+                        var put = '<tbody>';
+                        for (var i = 0; i < result.length; i = i + 5) {
+                            put += '<tr><td><br/></td></tr><tr><td>From :' + result[i + 1] + '</td></tr><tr><td>Date and Time :' + result[i + 4] + '</td><td><button style="width:80px; height:30px; background-color:lightblue;" class="viewbtn text-primary" id ="viewbtn" name="viewbtn" onclick="viewfunc()" value="' + result[i + 3] + '">VIEW</button></td></tr><tr><td><br/></td></tr><tr><td>____________________________________________________</td><td>_________</td></tr>';
+
+                        }
+                        put += '</tbody>';
+                        $('#newmsg').append(put);
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+                },
+
+            });
+
+            //====================
+            $.ajax({
+                url: '/Contact/ViewContactUsDetail',
+                type: 'get',
+                dataType: 'json',
+                success: function (result) {
+                    
+                    if (result) {
+                        var put1 = '<tbody>';
+                        for (var i = 0; i < result.length; i = i + 5) {
+                            put1 += '<tr><td><br/></td></tr><tr><td>Contact Id :' + result[i] + '</td></tr><tr><td>Contact Name :' + result[i + 1] + '</td></tr><tr><td>Contact Email :' + result[i + 2] + '</td></tr><tr><td>Contact Mobile No :' + result[i + 3] + '</td></tr><tr><td>Contact Message: ' + result[i + 4] + '</td></tr><tr><td><hr/><button class="viewcontactbtn text-primary" id="view" name="viewcontactbtn" onclick="showsendcontactuspopup(' + result[i]  + ');" value="' + result[i + 2] + '"> Replay</button></td></tr><tr><td>__________________________________________________________________</td></tr>';
+                        }
+                        put1 += '</tbody>';
+                        $('#viewcontactus').append(put1);
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+                },
+
+            });
+
+
+            $("#teachereditprofile").click(function () {
+                var uname = $("#uname").val();
+                var uemail = $("#uemail").val();
+                var uaddress = $("#uaddress").val();
+                var umobileno = $("#umobileno").val();
+                //alert(uname);
+                //alert(uemail);
+                //alert(uaddress);
+                //alert(umobileno);
+                $.ajax({
+                    url: '/User/TeacherEditProfile',
+                    type: 'post',
+                    dataType: 'json',
+                    data:
+                    {
+                        UserName: uname,
+                        UserEmail: uemail,
+                        UserAddress: uaddress,
+                        UserMobileNo: umobileno,
+                    },
+                    success: function (result) {
+
+                        alert("hii");
+
+                    },
+
+                });
+            });
+
+            $("#sendbtn").click(function () {
+                var frommsg = $("#adminfrom").val();
+                var tomsg = $("#to").val();
+                var msg = $("#msg").val();
+
+                $.ajax({
+                    url: '/MessageBoard/SendMessage',
+                    type: 'post',
+                    dataType: 'json',
+                    data:
+                    {
+                        FromMsg: frommsg,
+                        ToMsg: tomsg,
+                        Msg: msg,
+                    },
+                    success: function (result) {
+
+                        alert("Message send successfully");
+                        location.reload();
+
+                    },
+
+                });
+            });
+
+            //1-------------------------------------------------
+
+            $("#sendcontact").click(function () {
+                var fromcontact = $("#contactadminfrom").val();
+                var tocontact = $("#contactto").val();
+                var msg = $("#contactmsg").val();
+                alert(fromcontact);
+                alert(tocontact);
+                alert(msg);
+
+                $.ajax({
+                    url: '/Contact/SendMessage',
+                    type: 'post',
+                    dataType: 'json',
+                    data:
+                    {
+                        //FromMsg: fromcontact,
+                        ContactEmail: tocontact,
+                        ContactMsg: msg,
+                    },
+                    success: function (result) {
+
+                        alert("Message send successfully");
+                        location.reload();
+
+                    },
+
+                });
+            });
+
+           
+
+            //2-----------------------------------------
+            //$(".viewcontactbtn").click(function () {
+
+            //    var name = $(this).attr("name");
+            //    alert(name);
+            //    if (name == 'viewcontactbtn') {
+            //        var msgemail = $(this).attr("vals");
+            //        alert(msgmail);
+            //        $.ajax({
+            //            url: '/MessageBoard/GetMsgById',
+            //            type: 'get',
+            //            dataType: 'json',
+            //            data:
+            //            {
+            //                id: msgid,
+            //            },
+            //            success: function (result) {
+            //                document.getElementById('msgfrom').value = result[1];
+            //                document.getElementById('msgto').value = result[0];
+            //                document.getElementById('msgtime').value = result[3];
+            //                document.getElementById('msgcontent').value = result[2];
+            //                $('#viewmsgdiv').animate({ top: '23%' }, 500);
+            //                document.getElementById("overlay2").style.display = "block";
+            //            },
+
+            //        });
+            //    }
+            //});
+
+
+            $.ajax({
+                url: '/Dashboard/GetUserId',
+                type: 'get',
+                dataType: 'json',
+
+                success: function (result) {
+                    document.getElementById('from').value = result;
+
+                },
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+
+        function search(string) {
+            window.find(string);
+        }
+
+        function showpopup() {
+            $('#senddiv').animate({ top: '23%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+
+        }
+        function hidepopup() {
+            $('#senddiv').animate({ top: '-500%' }, 500);
+            document.getElementById("overlay1").style.display = "none";
+            window.location.reload();
+        }
+
+        function showcontactpopup() {
+            $('#contactdiv').animate({ top: '4%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+
+        }
+        function hidecontactpopup() {
+            $('#contactdiv').animate({ top: '-500%' }, 500);
+            document.getElementById("overlay1").style.display = "none";
+        }
+        
+        //function showsendcontactuspopup() {
+       
+        //    $('#contactdiv').hide();
+        //    $('#sendcontactusdiv').animate({ top: '14%' }, 500);
+        //    document.getElementById("overlay1").style.display = "block";
+
+        //}
+        //function hidesendcontactuspopup() {
+        //    $('#senddiv').animate({ top: '-500%' }, 500);
+        //    document.getElementById("overlay1").style.display = "none";
+        //}
+        function hideviewmsgdiv() {
+            $('#viewmsgdiv').animate({ top: '-500%' }, 500);
+            document.getElementById("overlay2").style.display = "none";
+            window.location.reload();
+        }
+        function Clearfield() {
+            //document.getElementById('from').value = "";
+            document.getElementById('to').value = "";
+            document.getElementById('msg').value = "";
+        }
+
+        function viewfunc() {
+            
+            
+            var msgid = $("#viewbtn").val();
+                alert(msgid);
+                $.ajax({
+                    url: '/MessageBoard/GetMsgById',
+                    type: 'get',
+                    dataType: 'json',
+                    data:
+                    {
+                        id: msgid,
+                    },
+                    success: function (result) {
+                        document.getElementById('msgfrom').value = result[1];
+                        document.getElementById('msgto').value = result[0];
+                        document.getElementById('msgtime').value = result[3];
+                        document.getElementById('msgcontent').value = result[2];
+                        $('#viewmsgdiv').animate({ top: '23%' }, 500);
+                        document.getElementById("overlay2").style.display = "block";
+                    },
+
+                });
+           
+        }
+
+        function showsendcontactuspopup(contactid) {
+            //alert("hiii");
+            $('#contactdiv').hide();
+            //debugger
+           // var contactemail = $("#view").val();
+           
+            //debugger
+            $.ajax({
+                url: '/Contact/GetMsgById',
+                type: 'get',
+                dataType: 'json',
+                data:
+                {
+                    Contactid: contactid,
+                },
+                success: function (result) {
+                   
+                    document.getElementById('contactto').value = result[1];
+                    document.getElementById('contactadminfrom').value = result[2];
+                },
+
+            });
+            $('#sendcontactusdiv').animate({ top: '14%' }, 500);
+            document.getElementById("overlay1").style.display = "block";
+            //}
+        }
+    </script>
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

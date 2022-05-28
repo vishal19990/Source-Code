@@ -1,0 +1,397 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj": {}
+  },
+  "projects": {
+    "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Entity\\ChildCare.MonitoringSystem.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Entity\\ChildCare.MonitoringSystem.Entity.csproj",
+        "projectName": "ChildCare.MonitoringSystem.Entity",
+        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Entity\\ChildCare.MonitoringSystem.Entity.csproj",
+        "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
+        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj",
+        "projectName": "ChildCare.MonitoringSystem.Model",
+        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj",
+        "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
+        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
+        "projectName": "ChildCare.MonitoringSystem.Common",
+        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
+        "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
+        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
+        "projectName": "ChildCare.MonitoringSystem.Core",
+        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
+        "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
+        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
+        "projectName": "ChildCare.MonitoringSystem.Business",
+        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
+        "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
+        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj"
+              },
+              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj"
+              },
+              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
+              },
+              "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj",
+        "projectName": "ChildCare.MonitoringSystem.Repository",
+        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj",
+        "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
+        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Entity\\ChildCare.MonitoringSystem.Entity.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Entity\\ChildCare.MonitoringSystem.Entity.csproj"
+              },
+              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj"
+              },
+              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

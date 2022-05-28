@@ -1,0 +1,107 @@
+﻿@inject ChildCare.MonitoringSystem.Common.AppSettings appSettings;
+@{
+    ViewData["Title"] = "Class A";
+}
+
+@section LeftNavigation{
+    <partial name="_AdminLeftNavigation" />
+}
+
+
+<div class="main-content">
+    <div class="container-fluid">
+        <h2>CameraView</h2><hr />
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-11">
+                <select name="type" style="padding:10px; width:20%">
+                    <option id="classA" type="button" value="Class A">CLASS A</option>
+                    <option id="classB" type="button" value="Class B">CLASS B</option>
+                    @*<option id="classC" type="button" value="Class B">CLASS C</option>
+                    <option id="classB" type="button" value="Class B">CLASS D</option>
+                    <option id="classB" type="button" value="Class B">CLASS E</option>
+                    <option id="classB" type="button" value="Class B">PLAY GROUND</option>*@
+                </select>
+                @*<input id="classA" type="button" value="Class A" />
+                <input id="classB" type="button" value="Class B" />*@
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <video id="cam" autoplay></video>
+            <div class="col-md-3">
+                <button id="start_record">Start recording</button>
+                <button id="uplods"class="btn-success"onclick="upload()">Upload to drive</button>
+            </div>
+            <div class="col-md-3">
+                
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/lib/signalr-client/signalr.js"></script>
+    <script src="~/js/webrtc/aykan-webrtc.min.js"></script>
+    <script type="text/javascript">
+        var ChildCare = ChildCare || {};
+
+        ChildCare.camName = 'classA';
+        ChildCare.mediaName = 'ClassAVideo';
+        ChildCare.urls = ChildCare.urls || {};
+        ChildCare.urls.signalHostUrl = "@appSettings.SignalUrl";
+        function upload() {
+            $.ajax({
+                url: '/Dashboard/GetFiles',
+                type: 'get',
+                dataType: 'json',
+                success: function (result) {
+
+                    if (result) {
+
+
+                        alert("all videos are uploaded");
+                    }
+                    else {
+                        alert("failed to get data");
+                    }
+
+                },
+
+
+            });
+        }
+        $(document).ready(function ()
+        {
+            startChannel();
+            join(ChildCare.camName);
+           
+        });
+    </script>
+    <script src="~/js/webrtc/common.js"></script>
+    <script src="~/js/pages/classView.js"></script>
+}
+<style>
+    #start_record {
+        background-color: royalblue;
+        border: 1px blue solid;
+        padding: 5px 20px 5px 20px;
+        color: black;
+    }
+
+        #start_record:hover {
+            background-color: transparent;
+            color: black;
+            border: 1px black solid;
+        }
+
+    #cam {
+        width: 60%;
+        height: 50%;
+        border: 10px grey solid;
+    }
+</style>
