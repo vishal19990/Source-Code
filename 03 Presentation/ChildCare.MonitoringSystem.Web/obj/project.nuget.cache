@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1M7Q9efYhF0AhTtaiqGMgUbTByCMF0zBjT8CakNP75d4kRAkZ8HID1O209Na2A9ICemK5fJOdmVcV3pGUkBmRA==",
+  "dgSpecHash": "eUcOmeZ9blaT141QxK5v11SGDRO+Y7F33C3CsqWrquzplY+5mzpm82SUZeudJIMDnZodIX6i0ybscqMQHbpWYw==",
   "success": true,
-  "projectFilePath": "D:\\ChildCare\\ChildCare\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Web\\ChildCare.MonitoringSystem.Web.csproj",
+  "projectFilePath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Web\\ChildCare.MonitoringSystem.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aykan\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\Aykan\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",

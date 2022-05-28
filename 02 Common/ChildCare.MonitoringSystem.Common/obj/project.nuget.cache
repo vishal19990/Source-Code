@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kiwUpwnPFI/yKYkot8bkatoyEymUkwAg0ZUcCse6ILygaY1lGnLDdAyrUl0YU0F3R+OHBZDNALDERap0yrSUxQ==",
+  "dgSpecHash": "KJOwdwy3hoHfyi1/O1o1bvtOi97ZVhwBv5563OSApSkP1+0wOs6lU7+rS7L9Q7Qqxg5KqDcXAUN289fQPNQ+pQ==",
   "success": true,
-  "projectFilePath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
+  "projectFilePath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aykan\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\Aykan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\2.1.1\\microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512",

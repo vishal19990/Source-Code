@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GSs1gO7Ka1txh5orTzKl+eKC7nqxY8PjB8zKBCS4FbcuFD/iPqc5ryvsnuRe9vWW00Xp3Degf+EAw6TORUVC1w==",
+  "dgSpecHash": "nov5Rb1EFYlMKHuEWpGCHQHFJD6W0JHAbTD0w9ii5sNqrPiZJIZVRQjgKLM8uW6YWTK0nvl4jqxOUsDPikNMJQ==",
   "success": true,
-  "projectFilePath": "D:\\ChildCare\\ChildCare\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling.csproj",
+  "projectFilePath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aykan\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Aykan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"

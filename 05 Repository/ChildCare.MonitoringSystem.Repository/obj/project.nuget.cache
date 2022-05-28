@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AtMSHKxJLxXWrtuWFIyMVEia8+GdNg2x8/LPSGMLiCG8W2Fl0A3Nzsoq1+kU0aQEe88smwRtPdYV+NwgpZkYmw==",
+  "dgSpecHash": "thQEJCgF/jxqywoZL0E4ADroBf77U5Mz/9i+EoXmZquM4UtCyhSbeW+aJ3hic137XQZolTNYyhNEOU3vjC856w==",
   "success": true,
-  "projectFilePath": "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj",
+  "projectFilePath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aykan\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\Aykan\\.nuget\\packages\\microsoft.entityframeworkcore\\2.1.1\\microsoft.entityframeworkcore.2.1.1.nupkg.sha512",

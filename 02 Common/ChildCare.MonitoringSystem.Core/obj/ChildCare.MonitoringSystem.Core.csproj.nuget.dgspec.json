@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {}
+    "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {}
   },
   "projects": {
-    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+    "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
+        "projectUniqueName": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
         "projectName": "ChildCare.MonitoringSystem.Core",
-        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
+        "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
         "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
-        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\obj\\",
+        "outputPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",

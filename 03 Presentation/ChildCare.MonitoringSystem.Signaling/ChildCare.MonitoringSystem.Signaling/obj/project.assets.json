@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling.csproj",
+      "projectUniqueName": "D:\\UploadFile\\ChildCareSysem\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling.csproj",
       "projectName": "ChildCare.MonitoringSystem.Signaling",
-      "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling.csproj",
+      "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling.csproj",
       "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
-      "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\obj\\",
+      "outputPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\03 Presentation\\ChildCare.MonitoringSystem.Signaling\\ChildCare.MonitoringSystem.Signaling\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kSzVGJmxU3NGeLe9VvUWo9YCCUV0S6oyPZaojowK4unsU9E4K7ywAeQAYfFSr6iNSEdCgJjwD0lJPmQ8w2OjZw==",
+  "dgSpecHash": "UuTAlLOC/TGlM0QMadRfkRMskWGwwi+Wb4SSopdCfHSItjskzQ0mOHYu8TXKmqK1qi3X1/ZsG0qTBLpLZTMgZQ==",
   "success": true,
-  "projectFilePath": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
+  "projectFilePath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aykan\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\Aykan\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.1\\microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",

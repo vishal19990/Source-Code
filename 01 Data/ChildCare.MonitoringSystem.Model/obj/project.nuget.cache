@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2U8m95lQbMNXsIs5Jf5TwFtWeiFVTgoQKpUXvd/lA9dstoCv4pcZ6lNklMTcdCoMPoZw9BUPqrOf3Q87gdxwTA==",
+  "dgSpecHash": "O78st3L4sz5MaBcVGOWamvEuqEdckyTu82ycgp1caVgjil0lEQkzj39DD694K3npefO3K1H9+7pkUIB39G7fjw==",
   "success": true,
-  "projectFilePath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj",
+  "projectFilePath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aykan\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.1\\microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
     "C:\\Users\\Aykan\\.nuget\\packages\\microsoft.extensions.primitives\\2.1.1\\microsoft.extensions.primitives.2.1.1.nupkg.sha512",

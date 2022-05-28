@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {}
+    "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {}
   },
   "projects": {
-    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
+    "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
+        "projectUniqueName": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
         "projectName": "ChildCare.MonitoringSystem.Common",
-        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
+        "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj",
         "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
-        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\obj\\",
+        "outputPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
-                "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
+              "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+                "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
               }
             }
           }
@@ -71,14 +71,14 @@
         }
       }
     },
-    "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+    "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
+        "projectUniqueName": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
         "projectName": "ChildCare.MonitoringSystem.Core",
-        "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
+        "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj",
         "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
-        "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\obj\\",
+        "outputPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5761,11 +5761,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
+      "projectUniqueName": "D:\\UploadFile\\ChildCareSysem\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
       "projectName": "ChildCare.MonitoringSystem.Business",
-      "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
+      "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\ChildCare.MonitoringSystem.Business.csproj",
       "packagesPath": "C:\\Users\\Aykan\\.nuget\\packages\\",
-      "outputPath": "D:\\ChildCare\\ChildCare\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\obj\\",
+      "outputPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\04 Business\\ChildCare.MonitoringSystem.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aykan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5781,17 +5781,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj": {
-              "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj"
+            "D:\\UploadFile\\ChildCareSysem\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj": {
+              "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\01 Data\\ChildCare.MonitoringSystem.Model\\ChildCare.MonitoringSystem.Model.csproj"
             },
-            "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
-              "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj"
+            "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj": {
+              "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Common\\ChildCare.MonitoringSystem.Common.csproj"
             },
-            "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
-              "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
+            "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj": {
+              "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\02 Common\\ChildCare.MonitoringSystem.Core\\ChildCare.MonitoringSystem.Core.csproj"
             },
-            "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj": {
-              "projectPath": "D:\\ChildCare\\ChildCare\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj"
+            "D:\\UploadFile\\ChildCareSysem\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj": {
+              "projectPath": "D:\\UploadFile\\ChildCareSysem\\Source Code\\05 Repository\\ChildCare.MonitoringSystem.Repository\\ChildCare.MonitoringSystem.Repository.csproj"
             }
           }
         }
